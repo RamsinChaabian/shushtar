@@ -1,29 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="title"></title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html" onclick="changeLanguage('ar')">عربي</a></li>
-        <li><a href="index.html" onclick="changeLanguage('en')">English</a></li>
-        <li><a href="index.html" onclick="changeLanguage('de')">Deutsch</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h1 data-i18n="welcome_message"></h1>
-    <p data-i18n="about_us"></p>
-  </main>
-  <footer>
-    <p data-i18n="footer_text"></p>
-  </footer>
-  <script src="assets/js/script.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title data-i18n="title"></title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<div class="container-fluid text-dark text-center py-3 overflow-hidden shadow-sm rounded-bottom">
+			<span>Shushtar Time:</span>
+			<span class="text-dark" id="tehrantime" style="margin-top: -15px;"></span>
+			<div style="margin-top: -10px;">
+				<div class="weather-news" id="weatherNews">
+					<span class="temperature"></span>&nbsp; <span class="feels-like"></span>&nbsp; <span class="pressure"></span>&nbsp; <span class="humidity"></span>&nbsp; <span class="wind-speed"></span>&nbsp; <span class="description"></span>&nbsp; <span class="weathericon"></span>&nbsp; <a href="https://openweathermap.org/city/114584" target="_blank" class="weather-animation">more ...</a>
+				</div>
+			</div>
+		</div>
+		</br>
+		<div class="dropdown show">
+			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+					<path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z" />
+					<path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31" />
+				</svg>
+			</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a>
+				<a class="dropdown-item" href="#" onclick="changeLanguage('de')">Deutsch</a>
+				<a class="dropdown-item text-end" href="#" onclick="changeLanguage('ar')">عربی</a>
+			</div>
+		</div>
+		<main class="mt-2">
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ul class="carousel-indicators" style="color: transparent">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				</ul>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="d-flex justify-content-center">
+							<img class="d-block w-75" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Shushtar_Historical_Hydraulic_System_Darafsh_%286%29.jpg/800px-Shushtar_Historical_Hydraulic_System_Darafsh_%286%29.jpg" alt="First slide" />
+						</div>
+						<div class="carousel-caption d-none d-md-block">
+							<h5 class="bg-dark p-2 text-white bg-opacity-50">shushtar</h5>
+							<p class="bg-dark p-2 text-white bg-opacity-50">shushtar</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="d-flex justify-content-center">
+							<img class="d-block w-75" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Sushtar_Bridge.jpg" alt="Second slide" />
+						</div>
+						<div class="carousel-caption d-none d-md-block">
+							<h5 class="bg-dark p-2 text-white bg-opacity-50">shushtar</h5>
+							<p class="bg-dark p-2 text-white bg-opacity-50">shushtar</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="d-flex justify-content-center">
+							<img class="d-block w-75" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Shushtar_bande_mizan.jpg/800px-Shushtar_bande_mizan.jpg" alt="Third slide" />
+						</div>
+					</div>
+					<div class="carousel-caption d-none d-md-block">
+						<h5 class="bg-dark p-2 text-white bg-opacity-50">shushtar</h5>
+						<p class="bg-dark p-2 text-white bg-opacity-50">shushtar</p>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only text-dark" data-i18n="previous_text"></span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only text-dark" data-i18n="next_text"></span>
+				</a>
+			</div>
+			<h1 data-i18n="welcome_message"></h1>
+			<p data-i18n="about_us"></p>
+		</main>
+		<footer>
+			<p data-i18n="footer_text"></p>
+		</footer>
+		<script src="assets/js/script.js"></script>
+	</body>
 </html>
-

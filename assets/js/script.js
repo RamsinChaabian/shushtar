@@ -56,49 +56,77 @@ function toggleArabicStylesheet(lang) {
   });
   
 
-// let enData, arData; // Define variables to hold language data
+//Weather
 
-// // Load language data based on user preference or default to English
-// const userPreferredLanguage = localStorage.getItem('language') || 'en';
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('https://api.openweathermap.org/data/2.5/weather?q=shushtar,ir&APPID=029a87c28964f9d5c30f9840196cd747')
+  .then(response => {
+      if (response.ok) {
+          return response.json();
+      } else {
+          throw new Error('Network response was not ok.');
+      }
+  })
+  .then(data => {
+      const temperatureKelvin = data.main.temp;
+      const temperatureCelsius = Math.round(temperatureKelvin - 273.15);
+      const feelsLikeKelvin = data.main.feels_like;
+      const feelsLikeCelsius = feelsLikeKelvin - 273.15;
+      const pressure = data.main.pressure;
+      const humidity = data.main.humidity;
+      const windSpeed = data.wind.speed;
+      const description = data.weather[0].description;
+      const icon = data.weather[0].icon;
 
-// // Load English data
-// fetch('languages/en.json')
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data)
-//     enData = data;
-//     if (userPreferredLanguage === 'en') {
-//       updateContent();
-//     }
-//   });
+      document.querySelector('.temperature').innerHTML = 'Temperature: <span>' + temperatureCelsius.toFixed(2) + ' °C</span>';
+      document.querySelector('.feels-like').innerHTML = 'Feels Like: <span>' + feelsLikeCelsius.toFixed(2) + ' °C</span>';
+      document.querySelector('.pressure').innerHTML = 'Pressure: <span>' + pressure + ' hPa</span>';
+      document.querySelector('.humidity').innerHTML = 'Humidity: <span>' + humidity + '%</span>';
+      document.querySelector('.wind-speed').innerHTML = 'Wind Speed: <span>' + windSpeed + ' m/s</span>';
+      document.querySelector('.description').innerHTML = 'Description: <span>' + description + '</span>';
+      document.querySelector('.weathericon').innerHTML = '<img src="https://openweathermap.org/img/wn/' + icon + '.png" alt="Weather Icon">';
+      
+  })
+  .catch(error => {
+      console.error('There was a problem with the fetch operation:', error.message);
+  });
+});
 
-// // Load Arabic data
-// fetch('languages/ar.json')
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data)
-//     arData = data;
-//     if (userPreferredLanguage === 'ar') {
-//       updateContent();
-//     }
-//   });
-//   function updateContent() {
-//     const langToUse = userPreferredLanguage === 'ar' ? arData : enData;
-    
-//     document.querySelectorAll('[data-i18n]').forEach(element => {
-//       const key = element.getAttribute('data-i18n');
-//       element.textContent = langToUse[key];
-//     });
-//   }
+window.onload = function() {
+  const weatherNews = document.getElementById('weatherNews');
 
-//   // Function to change language
-//   function changeLanguage(lang) {
-//     localStorage.setItem('language', lang);
-//     location.reload();
-//   }
-  
-//   // Call updateContent() on page load
-//   window.addEventListener('DOMContentLoaded', () => {
-//     updateContent();
-//   });
-  
+  weatherNews.addEventListener('mouseenter', function() {
+    this.style.animationPlayState = 'paused';
+  });
+
+  weatherNews.addEventListener('mouseleave', function() {
+    this.style.animationPlayState = 'running';
+  });
+};
+
+
+//Time
+
+function fetchTehranTime() {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'http://worldtimeapi.org/api/timezone/Asia/Tehran', true);
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+              const data = JSON.parse(xhr.responseText);
+              const tehranTimeElement = document.getElementById('tehrantime');
+              const tehranTime = new Date(data.datetime);
+              const formattedTime = tehranTime.toLocaleTimeString();
+              const formattedDate = tehranTime.toDateString();
+              tehranTimeElement.textContent = formattedTime + ' - ' + formattedDate;
+          } else {
+              console.error('خطا در دریافت اطلاعات:', xhr.statusText);
+          }
+      }
+  };
+  xhr.send();
+}
+
+fetchTehranTime();
+setInterval(fetchTehranTime, 1000);
+

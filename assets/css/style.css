@@ -1,4 +1,58 @@
-body {
-background-color:antiquewhite;
+
+/* Roboto Font */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 }
 
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #e5e5e5;
+}
+
+.col span,
+.col a {
+    margin-right: 10px;
+}
+
+.weather-news {
+    position: relative;
+    animation: slide 40s linear infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+}
+ /*کد CSS برای نمایش موارد در یک خط در هر اندازه صفحه‌ای */
+/* کد CSS برای نسخه موبایل */
+@media (max-width: 767px) {
+    .container-fluid.text-center.py-3.overflow-hidden.shadow-sm.rounded-bottom {
+        padding: 10px; /* تنظیم پدینگ کلی برای حاشیه */
+        border-radius: 0; /* حذف گوشه‌های گرد در موبایل */
+        height: 80px;
+    }
+    
+    .weather-news {
+        margin-top: 10px; /* تنظیم حاشیه بالا */
+        text-align: center; /* مرکز چین کردن متن */
+        display: flex; /* نمایش به صورت فلکس باکس */
+        flex-direction: row; /* جهت موارد به سمت راست */
+        flex-wrap: nowrap; /* جلوگیری از شکستن خط */
+        justify-content: space-between; /* تنظیم فضای بین موارد */       
+        white-space: nowrap; /* جلوگیری از شکستن خط */
+    }
+    
+    .weather-news span, .weather-animation {
+        margin-bottom: 5px; /* حاشیه پایین هر مورد */
+    }
+    .weathericon img{
+    margin-top: -10px;
+    }
+}
