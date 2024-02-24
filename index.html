@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta name="google-site-verification" content="wb4CAeQaRajHrCkXRCx2460HYreUWZ9KuT2LkncEXt0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title"></title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-<h1>
-Hello SHUSHTAR
-</h1>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" onclick="changeLanguage('ar')">عربي</a></li>
+        <li><a href="index.html" onclick="changeLanguage('en')">English</a></li>
+        <li><a href="index.html" onclick="changeLanguage('de')">Deutsch</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1 data-i18n="welcome_message"></h1>
+    <p data-i18n="about_us"></p>
+  </main>
+  <footer>
+    <p data-i18n="footer_text"></p>
+  </footer>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
+
