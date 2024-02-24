@@ -109,7 +109,7 @@ window.onload = function() {
 
 function fetchTehranTime() {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', 'http://worldtimeapi.org/api/timezone/Asia/Tehran', true);
+  xhr.open('GET', 'https://worldtimeapi.org/api/timezone/Asia/Tehran', true);
   xhr.onreadystatechange = function() {
       if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
