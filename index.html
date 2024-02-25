@@ -35,12 +35,23 @@
 		<link rel="stylesheet" href="./assets/css/style.css" />
 	</head>
 	<body>
-		<div class="container-fluid text-dark text-center py-3 overflow-hidden shadow-sm rounded-bottom">
-			<span>Shushtar Time:</span>
-			<span class="text-dark" id="tehrantime" style="margin-top: -15px;"></span>
-			<div style="margin-top: -10px;">
+		<div class="container-fluid text-dark text-center py-3 overflow-hidden shadow-sm rounded-bottom">			
+			<span data-i18n="time"></span>
+			<span class="text-dark" id="tehrantime"></span>&nbsp;
+			<span data-i18n="temperature"></span>
+			<span class="temperature"></span>
+			<span class="weathericon"></span>
+			<div class="more-description">
 				<div class="weather-news" id="weatherNews">
-					<span class="temperature"></span>&nbsp; <span class="feels-like"></span>&nbsp; <span class="pressure"></span>&nbsp; <span class="humidity"></span>&nbsp; <span class="wind-speed"></span>&nbsp; <span class="description"></span>&nbsp; <span class="weathericon"></span>&nbsp; <a href="https://openweathermap.org/city/114584" target="_blank" class="weather-animation">more ...</a>
+					<span data-i18n="feels_like"></span>
+					<span class="feels-like"></span>&nbsp;
+					<span data-i18n="pressure"></span>
+					<span class="pressure"></span>&nbsp; 
+					<span data-i18n="humidity"></span>
+					<span class="humidity"></span>&nbsp; 
+					<span data-i18n="wind_Speed"></span>&nbsp; 
+					<span class="wind-speed"></span>&nbsp; 
+					<a href="https://openweathermap.org/city/114584" target="_blank" data-i18n="more"></a>
 				</div>
 			</div>
 		</div>

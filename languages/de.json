@@ -1,6 +1,12 @@
 {
-    "title": "Startseite",
-    "welcome_message": "Willkommen auf unserer Website!",
+    "time": "Shushtar Zeit:",
+	"temperature": "Temperatur:",
+	"feels_like": "Gefühlte Temperatur:",
+	"pressure": "Druck:",
+	"humidity": "Luftfeuchtigkeit:",
+	"wind_Speed": "Windgeschwindigkeit:",
+	"more": "mehr ...",
+    "welcome_message": "Willkommen in Shushtar",
     "footer_text": "© 2024 Ihr Unternehmen. Alle Rechte vorbehalten.",
     "next_text": "Nächste",
     "previous_text": "Vorherige"

@@ -16,43 +16,57 @@ body{
 .col a {
     margin-right: 10px;
 }
+.container-fluid{
+    height: 80px;
+    margin-top: -15px;
+}
 
 .weather-news {
     position: relative;
-    animation: slide 40s linear infinite;
-  }
-
-  @keyframes slide {
+    animation: slide 20s linear infinite;
+}
+@keyframes slide {
     0% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
     100% {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
 }
- /*کد CSS برای نمایش موارد در یک خط در هر اندازه صفحه‌ای */
-/* کد CSS برای نسخه موبایل */
+
+.ltr::after {
+    content: ' \2103';
+}
+
+.more-description{
+    margin-top: -15px;
+}
+
 @media (max-width: 767px) {
     .container-fluid.text-center.py-3.overflow-hidden.shadow-sm.rounded-bottom {
-        padding: 10px; /* تنظیم پدینگ کلی برای حاشیه */
-        border-radius: 0; /* حذف گوشه‌های گرد در موبایل */
-        height: 80px;
+        height:60px;
+        font-size: x-small;
+        padding: 10px; 
+        border-radius: 0;
+    }
+    .more-description{
+        margin-top: -20px;
     }
     
     .weather-news {
-        margin-top: 10px; /* تنظیم حاشیه بالا */
-        text-align: center; /* مرکز چین کردن متن */
-        display: flex; /* نمایش به صورت فلکس باکس */
-        flex-direction: row; /* جهت موارد به سمت راست */
-        flex-wrap: nowrap; /* جلوگیری از شکستن خط */
-        justify-content: space-between; /* تنظیم فضای بین موارد */       
-        white-space: nowrap; /* جلوگیری از شکستن خط */
+        margin-top: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        white-space: nowrap;
     }
     
-    .weather-news span, .weather-animation {
-        margin-bottom: 5px; /* حاشیه پایین هر مورد */
+    .weather-news span {
+        margin-bottom: 5px;
     }
-    .weathericon img{
+    .weathericon img {
     margin-top: -10px;
     }
 }

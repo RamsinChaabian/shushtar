@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&display=swap');
 
+.noto-naskh arabic-<uniquifier> {
+  font-family: "Noto Naskh Arabic", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
 body {
     direction: rtl;
-
+	font-family: "Noto Naskh Arabic", serif;
     }
+.weather-news {
+   animation-direction: reverse;
+}
+.rtl::before {
+    content: ' \2103';
+}
