@@ -11,7 +11,8 @@
 	"description": "Description:",
 	"more": "more ...",
     "welcome_message": "Welcome to Shushtar",
-    "footer_text": "© 2024 Your Company. All rights reserved.",
+    "close": "close",
+	"footer_text": "© 2024 Your Company. All rights reserved.",
 	"next_text": "Next",
     "previous_text": "Previous"
   }

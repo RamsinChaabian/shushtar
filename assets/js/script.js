@@ -201,10 +201,10 @@ document.getElementById('weatherPopup').addEventListener('show.bs.modal', getWea
       const tehranTime = new Date(data.datetime);      
       const bodyDirection = getComputedStyle(document.body).direction;
       if (bodyDirection === "ltr") {
-          const dateTimeFormat = new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'full' });
-          tehranTimeElement.textContent = dateTimeFormat.format(tehranTime);
+        const dateTimeFormat = new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'full'});
+        tehranTimeElement.textContent = dateTimeFormat.format(tehranTime);
       } else if (bodyDirection === "rtl") {
-          const dateTimeFormat = new Intl.DateTimeFormat('ar-SA', { dateStyle: 'full', timeStyle: 'full' });
+          const dateTimeFormat = new Intl.DateTimeFormat('ar-SA', { dateStyle: 'full', timeStyle: 'full'});
           tehranTimeElement.textContent = dateTimeFormat.format(tehranTime);
       }
     } catch (error) {

@@ -51,32 +51,23 @@ body{
 }
 
 .more-description{
-    margin-top: -15px;
+    margin-top: -7px;
 }
 
 @media (max-width: 767px) {
     .container-fluid.text-center.py-3.overflow-hidden.shadow-sm.rounded-bottom {
-        height:60px;
         font-size: x-small;
         padding: 10px; 
         border-radius: 0;
     }
-    .more-description{
-        margin-top: -20px;
-    }
     
     .weather-news {
-        margin-top: 10px;
         text-align: center;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
         white-space: nowrap;
-    }
-    
-    .weather-news span {
-        margin-bottom: 5px;
     }
     .weathericon img {
     margin-top: -10px;
