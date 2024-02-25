@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&display=swap');
 
-.noto-naskh arabic-<uniquifier> {
+.noto-naskh arabic-uniquifier {
   font-family: "Noto Naskh Arabic", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
   font-style: normal;
 }
 body {
@@ -13,6 +12,18 @@ body {
 .weather-news {
    animation-direction: reverse;
 }
-.rtl::before {
+.temperature.rtl::before {
     content: ' \2103';
+}
+.feels-like.rtl::before {
+    content: ' \2103';
+}
+.pressure.rtl::after{
+    content: 'hPa';
+}
+.humidity.rtl::after{
+    content: '%';
+}
+.wind-speed.rtl::after{
+    content: 'm/s';
 }

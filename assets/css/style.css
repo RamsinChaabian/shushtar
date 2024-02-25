@@ -34,8 +34,20 @@ body{
     }
 }
 
-.ltr::after {
+.temperature.ltr::after {
     content: ' \2103';
+}
+.feels-like.ltr::after {
+    content: ' \2103';
+}
+.pressure.ltr::after{
+    content: ' hPa';
+}
+.humidity.ltr::after{
+    content: '%';
+}
+.wind-speed.ltr::after{
+    content: 'm/s';
 }
 
 .more-description{

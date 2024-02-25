@@ -35,27 +35,50 @@
 		<link rel="stylesheet" href="./assets/css/style.css" />
 	</head>
 	<body>
+
 		<div class="container-fluid text-dark text-center py-3 overflow-hidden shadow-sm rounded-bottom">			
+			<span class="fw-bold" data-i18n="now"></span>
 			<span data-i18n="time"></span>
-			<span class="text-dark" id="tehrantime"></span>&nbsp;
+			<span class="fw-bold" id="tehrantime"></span>&nbsp;
 			<span data-i18n="temperature"></span>
-			<span class="temperature"></span>
+			<span class="temperature fw-bold"></span>
 			<span class="weathericon"></span>
+			<a href="#" data-bs-toggle="modal" data-bs-target="#weatherPopup" data-i18n="weather_forecast"></a>
 			<div class="more-description">
 				<div class="weather-news" id="weatherNews">
 					<span data-i18n="feels_like"></span>
-					<span class="feels-like"></span>&nbsp;
+					<span class="feels-like fw-bold"></span>&nbsp;
 					<span data-i18n="pressure"></span>
-					<span class="pressure"></span>&nbsp; 
+					<span class="pressure fw-bold"></span>&nbsp; 
 					<span data-i18n="humidity"></span>
-					<span class="humidity"></span>&nbsp; 
-					<span data-i18n="wind_Speed"></span>&nbsp; 
-					<span class="wind-speed"></span>&nbsp; 
+					<span class="humidity fw-bold"></span>&nbsp; 
+					<span data-i18n="wind_Speed"></span>
+					<span class="wind-speed fw-bold"></span>
+					&nbsp; 
 					<a href="https://openweathermap.org/city/114584" target="_blank" data-i18n="more"></a>
 				</div>
 			</div>
 		</div>
 		</br>
+
+		<!-- Popup content -->
+		<div class="modal fade" id="weatherPopup" tabindex="-1" aria-labelledby="weatherPopupLabel" aria-hidden="true">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header" dir="ltr">
+				  <h5 class="modal-title" id="weatherPopupLabel" data-i18n="weather_forecast"></h5>
+				  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+				  <!-- Weather forecast content will be inserted here -->
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
 		<div class="dropdown show">
 			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
@@ -120,6 +143,8 @@
 		<footer>
 			<p data-i18n="footer_text"></p>
 		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 		<script src="assets/js/script.js"></script>
 	</body>
 </html>
