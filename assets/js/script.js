@@ -151,7 +151,7 @@ function toggleArabicStylesheet(lang) {
                 tableHTML += `
                 <tr>
                     <td>${date}</td>
-                    <td><span>${temperatureCelsius}</span><img src="https://openweathermap.org/img/wn/${icon}.png" alt="Weather Icon"></td>
+                    <td><span>${temperatureCelsius}</span><img loading="lazy" src="https://openweathermap.org/img/wn/${icon}.png" alt="Weather Icon"></td>
                     <td>${feelsLikeKelvin}</td>
                     <td>${weatherDescription}</td>
                     <td>${windSpeed}</td>
