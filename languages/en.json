@@ -12,8 +12,15 @@
 	"more": "more ...",
     "welcome_message": "Welcome to Shushtar",
     "close": "close",
-	"footer_text": "© 2024 Your Company. All rights reserved.",
+	"footer_text": "Developed by",
+	"ramsin": "Ramsin Chaabian",
 	"next_text": "Next",
-    "previous_text": "Previous"
+    "previous_text": "Previous",
+	"absharatitle": "Shushtar Historical Hydraulic System",
+	"absharacaption": "The Shushtar Historical Hydraulic System, a UNESCO World Heritage site, features 13 interconnected ancient waterworks",
+	"bandmizantitle": "Sasanian Legacy: The Mizaan Dam's Enduring Impact on Shushtar's Agriculture",
+	"bandmizancaption": "The Mizaan Dam in Shushtar, dating back to the Sasanian era, divides the Karun River, sustaining vast agricultural land",
+	"selasaltitle": "Selasal Castle: A Magnificent Fortress of Shushtar's Rich History",
+	"selasalcaption": "Selasal Castle in Shushtar, a vast fortress with intricate courtyards, barracks, baths, towers, gardens, and more"
   }
   

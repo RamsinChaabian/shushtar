@@ -11,9 +11,16 @@
 	"description": "Beschreibung:",
 	"more": "mehr ...",
     "welcome_message": "Willkommen in Shushtar",
-    "footer_text": "© 2024 Ihr Unternehmen. Alle Rechte vorbehalten.",
+    "footer_text": "Entwickelt von",
+	"ramsin": "Ramsin Chaabian",
 	"close": "schließen",
     "next_text": "Nächste",
-    "previous_text": "Vorherige"
+    "previous_text": "Vorherige",
+	"absharatitle": "Historisches hydraulisches System von Shushtar",
+	"absharacaption": "Das historische hydraulische System von Shushtar, ein UNESCO-Weltkulturerbe, umfasst 13 miteinander verbundene antike Wasserversorgungsanlagen",
+	"bandmizantitle": "Sasanidisches Erbe: Die anhaltende Auswirkung des Mizaan-Damms auf die Landwirtschaft von Shushtar",
+	"bandmizancaption": "Der Mizaan-Damm in Shushtar, der bis in die sasanidische Ära zurückreicht, teilt den Fluss Karun und erhält ausgedehnte landwirtschaftliche Flächen",
+	"selasaltitle": "Schloss Selasal: Eine prächtige Festung mit reicher Geschichte von Shushtar",
+	"selasalcaption": "Das Schloss Selasal in Shushtar, eine weitläufige Festung mit komplexen Innenhöfen, Kasernen, Bädern, Türmen, Gärten und vielem mehr"
   }
   

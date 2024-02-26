@@ -34,7 +34,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 		<link rel="stylesheet" href="./assets/css/style.css" />
 	</head>
-	<body>
+	<body class="min-vh-100 d-flex flex-column 
+	justify-content-between">
 
 		<div class="container-fluid text-dark text-center py-3 overflow-hidden shadow-sm rounded-bottom">			
 			<span class="fw-bold" data-i18n="now"></span>
@@ -110,20 +111,20 @@
 					</a>
 					<div class="carousel-item active">
 						<div class="d-flex justify-content-center">
-							<img class="d-block w-75 img-fluid rounded-4" height="500" src="./images/abshara.webp" alt="Shushtar Abshara" />
+							<img class="d-block w-75 img-fluid rounded-4" src="./images/abshara.webp" alt="Shushtar Abshara" />
 						</div>
 						<div class="carousel-caption">
-							<h5 class="bg-dark p-2 text-white bg-opacity-50">shushtar1</h5>
-							<p class="bg-dark p-2 text-white bg-opacity-50">shushtar1</p>
+							<h5 class="bg-dark p-2 text-white bg-opacity-75" data-i18n="absharatitle"></h5>
+							<p class="bg-dark p-2 text-white bg-opacity-75" data-i18n="absharacaption"></p>
 						</div>
 					</div>
 					<div class="carousel-item">
 						<div class="d-flex justify-content-center">
-							<img class="d-block w-75 img-fluid rounded-4" height="500" src="./images/bandmizan.webp" alt="Shushtar Band Mizan" />
+							<img class="d-block w-75 img-fluid rounded-4" src="./images/bandmizan.webp" alt="Shushtar Band Mizan" />
 						</div>
 						<div class="carousel-caption">
-							<h5 class="bg-dark p-2 text-white bg-opacity-50">shushtar2</h5>
-							<p class="bg-dark p-2 text-white bg-opacity-50">shushtar2</p>
+							<h5 class="bg-dark p-2 text-white bg-opacity-75" data-i18n="bandmizantitle"></h5>
+							<p class="bg-dark p-2 text-white bg-opacity-75" data-i18n="bandmizancaption"></p>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -131,19 +132,21 @@
 							<img class="d-block w-75 img-fluid rounded-4" src="./images/salasel.webp" alt="Shushtar Salasel Castle" />
 						</div>
 						<div class="carousel-caption">
-							<h5 class="bg-dark p-2 text-white bg-opacity-50">shushtar3</h5>
-							<p class="bg-dark p-2 text-white bg-opacity-50">shushtar3</p>
+							<h5 class="bg-dark p-2 text-white bg-opacity-75"data-i18n="selasaltitle"></h5>
+							<p class="bg-dark p-2 text-white bg-opacity-75"data-i18n="selasalcaption"></p>
 						</div>
 					</div>
 					
 				</div>
 				
 			</div>
-			<h1 data-i18n="welcome_message"></h1>
-			<p data-i18n="about_us"></p>
+			<h1 class="text-center mt-1" data-i18n="welcome_message"></h1>
+			
 		</main>
-		<footer>
-			<p data-i18n="footer_text"></p>
+		<footer class="footer mt-auto py-3 bg-light">
+			<div class="container">
+				<span class="text-muted" data-i18n="footer_text"></span><a href="https://www.linkedin.com/in/ramsinchaabian" class="ms-1 ml-1 text-danger" data-i18n="ramsin"></a>
+			  </div>
 		</footer>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
