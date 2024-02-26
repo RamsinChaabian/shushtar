@@ -24,9 +24,8 @@
     
     const langData = await fetchLanguageData(lang);
     updateContent(langData);
-
-    //
     toggleArabicStylesheet(lang);// Toggle Arabic stylesheet
+
   }
 
 // Function to toggle Arabic stylesheet based on language selection
@@ -53,6 +52,8 @@ function toggleArabicStylesheet(lang) {
     const langData = await fetchLanguageData(userPreferredLanguage);
     updateContent(langData);
     toggleArabicStylesheet(userPreferredLanguage);
+    document.documentElement.lang = userPreferredLanguage;
+
   });
   
 //Get Shushtar Weather
