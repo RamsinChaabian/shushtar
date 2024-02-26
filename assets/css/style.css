@@ -27,7 +27,7 @@ body{
 }
 @keyframes slide {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-90%);
     }
     100% {
         transform: translateX(100%);
@@ -84,3 +84,15 @@ body{
         font-size: small;
     }
 }
+@media (max-width: 1000px) and (orientation: landscape) {
+    
+    a[data-i18n="weather_forecast"]{
+        font-size: small;
+    }
+    .sr-only{
+        display: none;
+    }
+    .carousel-control-next-icon,.carousel-control-prev-icon{
+        height: 200px;
+    }
+  }
