@@ -96,3 +96,13 @@ body{
         height: 200px;
     }
   }
+@media (max-width: 300px) {
+    .container-fluid.text-center.py-3.overflow-hidden.shadow-sm.rounded-bottom {
+       height: 100px;
+    } 
+}
+@media (min-width: 767px) and (max-width: 1000px) {
+    .container-fluid.text-center.py-3.overflow-hidden.shadow-sm.rounded-bottom {
+       height: 100px;
+    }
+}
