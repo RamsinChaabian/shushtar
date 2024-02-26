@@ -60,7 +60,12 @@ body{
         padding: 10px; 
         border-radius: 0;
     }
-    
+    .sr-only{
+        display: none;
+    }
+    .carousel-control-next-icon,.carousel-control-prev-icon{
+        height: 200px;
+    }
     .weather-news {
         text-align: center;
         display: flex;
