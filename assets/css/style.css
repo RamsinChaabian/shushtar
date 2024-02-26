@@ -72,4 +72,7 @@ body{
     .weathericon img {
     margin-top: -10px;
     }
+    .carousel-caption{
+        bottom: -15%;
+    }
 }
