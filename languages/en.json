@@ -9,6 +9,7 @@
 	"humidity": "Humidity:",
 	"wind_Speed": "Wind Speed:",
 	"description": "Description:",
+	"status": "Status",
 	"more": "more ...",
     "welcome_message": "Welcome to Shushtar",
     "close": "close",

@@ -9,6 +9,7 @@
 	"humidity": "هكتوباسكال الرطوبة:",
 	"wind_Speed": "سرعة الرياح:",
 	"description": "وصف:",
+	"status": "الحالة",
 	"more": "أكثر ...",
     "welcome_message": "مرحبا بیکم فی شوشتر",
 	"close": "أغلق النافذة",

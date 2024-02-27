@@ -118,11 +118,12 @@ function toggleArabicStylesheet(lang) {
         const modalBody = document.querySelector('.modal-body');
         let tableHTML = `
         <div class="table-responsive">
-        <table class="table table-striped text-center table-success table-sm" style="font-size: smaller;max-height: 200px;overflow: auto;display:inline-block;">
+        <table class="table table-striped text-center table-success" style="font-size: smaller;max-height: 200px;overflow: auto;display:inline-block;">
             <thead>
                 <tr>
                     <th data-i18n="date"></th>
                     <th data-i18n="temperature"></th>
+                    <th data-i18n="status"></th>
                     <th data-i18n="feels_like"></th>
                 </tr>
             </thead>
@@ -136,14 +137,17 @@ function toggleArabicStylesheet(lang) {
             const [year, month, day] = datePart.split('-');
             const [hour, minute, second] = timePart.split(':');
 
+            let textStyle="";
             if (bodyDirection === "ltr") {
                 date = new Date(year, month - 1, day, hour, minute, second);
                 const dateTimeFormat = new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'short' });
                 date = dateTimeFormat.format(date);
+                textStyle="text-start";
             } else if (bodyDirection === "rtl") {
                 date = new Date(year, month - 1, day, hour, minute, second);
                 const dateTimeFormat = new Intl.DateTimeFormat('ar-SA', { dateStyle: 'full', timeStyle: 'short' });
                 date = dateTimeFormat.format(date);
+                textStyle="text-end";
             }
             const temperatureKelvin = forecast.main.temp;
             const temperatureCelsius = Math.round(temperatureKelvin - 273.15);
@@ -153,9 +157,10 @@ function toggleArabicStylesheet(lang) {
 
                 tableHTML += `
                 <tr>
-                    <td>${date}</td>
-                    <td><span>${temperatureCelsius.toFixed(0)}</span><span class="temperature fw-bold ${bodyDirection}"></span><img loading="lazy" height="50" width="50" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather Icon"></td>
-                    <td><span>${feelsLikeCelsius.toFixed(0)}</span><span class="feels-like fw-bold ${bodyDirection}"></span></td>
+                    <td class="${textStyle}">${date}</td>
+                    <td dir="ltr"><span class="fw-bold">${temperatureCelsius.toFixed(0)}</span><span class="fw-bold">&#8451;</span></td>
+                    <td><img loading="lazy" style="width: 100%;object-fit: none;" height="75" width="75" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather Icon"></td>
+                    <td dir="ltr"><span class="fw-bold">${feelsLikeCelsius.toFixed(0)}</span><span class="fw-bold">&#8451;</span></td>
                 </tr>
             `;     
 

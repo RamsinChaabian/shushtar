@@ -9,6 +9,7 @@
 	"humidity": "Luftfeuchtigkeit:",
 	"wind_Speed": "Windgeschwindigkeit:",
 	"description": "Beschreibung:",
+	"status": "Wetterlage",
 	"more": "mehr ...",
     "welcome_message": "Willkommen in Shushtar",
     "footer_text": "Entwickelt von",
