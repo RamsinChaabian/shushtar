@@ -42,6 +42,12 @@ function toggleArabicStylesheet(lang) {
         newLink.rel = 'stylesheet';
         newLink.href = './assets/css/style-ar.css'; // Path to Arabic stylesheet
         head.appendChild(newLink);
+
+        var images = document.querySelectorAll('img.rounded-end-4');
+        images.forEach(function(image) {
+            image.classList.remove('rounded-end-4');
+        });
+
       }
   }
   
@@ -92,7 +98,7 @@ function toggleArabicStylesheet(lang) {
       document.querySelector('.humidity').classList.add(bodyDirection);
       document.querySelector('.wind-speed').classList.add(bodyDirection);
 
-      document.querySelector('.weathericon').innerHTML = '<img src="https://openweathermap.org/img/wn/' + icon + '.png" alt="Weather Icon">';
+      document.querySelector('.weathericon').innerHTML = '<img height="75" width="75" src="https://openweathermap.org/img/wn/' + icon + '@2x.png" alt="Weather Icon">';
     } catch (error) {
       console.error('There was a problem with the fetch operation:', error.message);
     }
@@ -151,7 +157,7 @@ function toggleArabicStylesheet(lang) {
                 tableHTML += `
                 <tr>
                     <td>${date}</td>
-                    <td><span>${temperatureCelsius}</span><img loading="lazy" src="https://openweathermap.org/img/wn/${icon}.png" alt="Weather Icon"></td>
+                    <td><span>${temperatureCelsius}</span><img loading="lazy" height="75" width="75" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather Icon"></td>
                     <td>${feelsLikeKelvin}</td>
                     <td>${weatherDescription}</td>
                     <td>${windSpeed}</td>
