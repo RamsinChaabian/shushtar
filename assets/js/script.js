@@ -118,14 +118,12 @@ function toggleArabicStylesheet(lang) {
         const modalBody = document.querySelector('.modal-body');
         let tableHTML = `
         <div class="table-responsive">
-        <table class="table table-striped table-success table-sm" style="font-size: smaller;max-height: 200px;overflow: auto;display:inline-block;">
+        <table class="table table-striped text-center table-success table-sm" style="font-size: smaller;max-height: 200px;overflow: auto;display:inline-block;">
             <thead>
                 <tr>
                     <th data-i18n="date"></th>
                     <th data-i18n="temperature"></th>
                     <th data-i18n="feels_like"></th>
-                    <th data-i18n="description">Description</th>
-                    <th data-i18n="wind_Speed"></th>
                 </tr>
             </thead>
             <tbody>
@@ -150,17 +148,14 @@ function toggleArabicStylesheet(lang) {
             const temperatureKelvin = forecast.main.temp;
             const temperatureCelsius = Math.round(temperatureKelvin - 273.15);
             const feelsLikeKelvin = forecast.main.feels_like;
-            const windSpeed = forecast.wind.speed;
+            const feelsLikeCelsius = feelsLikeKelvin - 273.15;  
             const icon = forecast.weather[0].icon;
-            const weatherDescription = forecast.weather[0].description;
 
                 tableHTML += `
                 <tr>
                     <td>${date}</td>
-                    <td><span>${temperatureCelsius}</span><img loading="lazy" height="75" width="75" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather Icon"></td>
-                    <td>${feelsLikeKelvin}</td>
-                    <td>${weatherDescription}</td>
-                    <td>${windSpeed}</td>
+                    <td><span>${temperatureCelsius.toFixed(0)}</span><span class="temperature fw-bold ${bodyDirection}"></span><img loading="lazy" height="50" width="50" src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weather Icon"></td>
+                    <td><span>${feelsLikeCelsius.toFixed(0)}</span><span class="feels-like fw-bold ${bodyDirection}"></span></td>
                 </tr>
             `;     
 
