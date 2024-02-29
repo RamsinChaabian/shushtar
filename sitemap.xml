@@ -5,7 +5,8 @@
       <loc>https://myshushtar.ir/</loc>
       <xhtml:link rel="alternate" hreflang="ar" href="https://myshushtar.ir/index_ar.html" />
       <xhtml:link rel="alternate" hreflang="de" href="https://myshushtar.ir/index_de.html" />
-      <lastmod>2024-02-24</lastmod>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://myshushtar.ir/index_fr.html" />
+      <lastmod>2024-02-29</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
    </url>
