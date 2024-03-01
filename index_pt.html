@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>🌍 Cidade Turística Shushtar</title>
+	<meta name="description"
+		content="Welcome to Shushtar, a beautiful tourist city with rich cultural heritage. Discover its wonders through our website.مرحباً بكم في شوشتر، المدينة السياحية الجميلة ذات التراث الثقافي الغني. اكتشف عجائبها من خلال موقعنا. Willkommen in Shushtar, einer schönen Touristenstadt mit reichem kulturellem Erbe. Entdecken Sie seine Wunder durch unsere Website.">
+
+	<script src="/assets/js/common.js"></script>
+</head>
+<div id="commonBodyContainer"></div>
+<script>
+    fetch('common-body.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('commonBodyContainer').innerHTML = data;
+        });
+</script>
+<script src="/assets/js/shared-scripts.js"></script>
+</html>
