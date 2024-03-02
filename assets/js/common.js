@@ -16,21 +16,8 @@ var websiteJSON = {
     "url": "https://www.myshushtar.ir",
     "name": "Shushtar Tourist City",
     "description": "Official website for Shushtar, a tourist city offering rich cultural experiences.",
-    "inLanguage": ["en", "de", "ar", "fr", "es", "it"]
+    "inLanguage": ["en", "de", "ar", "fr", "es", "it","pt"]
 };
-
-//Google tag
-(function () {
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-EN2EGPJXT7';
-    document.head.appendChild(script);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-EN2EGPJXT7');
-})();
 
 //Font CSS
 var fontsLink = document.createElement('link');
