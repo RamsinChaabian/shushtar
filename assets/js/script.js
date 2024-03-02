@@ -196,8 +196,11 @@ function toggleArabicStylesheet(lang) {
     }
 }
 
-// Call the function to get and display weather forecast when the popup is opened
-document.getElementById('weatherPopup').addEventListener('show.bs.modal', getWeatherForecast);
+  // Call the function to get and display weather forecast when the popup is opened
+  var popupElement = document.getElementById("weatherPopup");
+  if (popupElement) {
+    popupElement.addEventListener('show.bs.modal', getWeatherForecast);
+  }
 
   //Pause Animation
   window.onload = function() {
