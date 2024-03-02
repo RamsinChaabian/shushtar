@@ -33,9 +33,6 @@ content: '%';
 .wind-speed.ltr::after{
 content: 'm/s';
 }
-.more-description{
-margin-top: -7px;
-}
 .imageicon{
 height: 2rem;
 }
