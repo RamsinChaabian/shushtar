@@ -3,11 +3,13 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
    <url>
       <loc>https://myshushtar.ir/</loc>
+	  <xhtml:link rel="alternate" hreflang="en" href="https://myshushtar.ir/index.html" />
       <xhtml:link rel="alternate" hreflang="ar" href="https://myshushtar.ir/index_ar.html" />
       <xhtml:link rel="alternate" hreflang="de" href="https://myshushtar.ir/index_de.html" />
       <xhtml:link rel="alternate" hreflang="fr" href="https://myshushtar.ir/index_fr.html" />
       <xhtml:link rel="alternate" hreflang="es" href="https://myshushtar.ir/index_es.html" />
       <xhtml:link rel="alternate" hreflang="it" href="https://myshushtar.ir/index_it.html" />
+	  <xhtml:link rel="alternate" hreflang="pt" href="https://myshushtar.ir/index_pt.html" />
       <lastmod>2024-02-29</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
