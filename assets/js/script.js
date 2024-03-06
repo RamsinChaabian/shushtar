@@ -54,6 +54,15 @@ function toggleArabicStylesheet(lang) {
   
   // Call updateContent() on page load
   window.addEventListener('DOMContentLoaded', async () => {
+    
+    await GetWeatherNews();
+    
+    // Call the function to get and display weather forecast when the popup is opened
+    var popupElement = document.getElementById("weatherPopup");
+    if (popupElement) {
+     await getWeatherForecast();
+    }
+
     const userPreferredLanguage = localStorage.getItem('language') || 'en';
     const langData = await fetchLanguageData(userPreferredLanguage);
     updateContent(langData);
@@ -78,7 +87,7 @@ function toggleArabicStylesheet(lang) {
   });
   
 //Get Shushtar Weather
-  document.addEventListener('DOMContentLoaded', async function() {
+   async function GetWeatherNews() {
     try {
       const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=shushtar,ir&APPID=029a87c28964f9d5c30f9840196cd747');
       if (!response.ok) {
@@ -117,7 +126,7 @@ function toggleArabicStylesheet(lang) {
     } catch (error) {
       console.error('There was a problem with the fetch operation:', error.message);
     }
-  });
+  }
 
 //Get Shushtar Weather Forecast
   async function getWeatherForecast() {
@@ -187,20 +196,10 @@ function toggleArabicStylesheet(lang) {
             </div>`;
         modalBody.innerHTML = tableHTML;
 
-        const userPreferredLanguage = localStorage.getItem('language') || 'en';
-        const langData = await fetchLanguageData(userPreferredLanguage);
-        updateContent(langData);
-
     } catch (error) {
         console.error('There was a problem with the fetch operation:', error.message);
     }
-}
-
-  // Call the function to get and display weather forecast when the popup is opened
-  var popupElement = document.getElementById("weatherPopup");
-  if (popupElement) {
-    popupElement.addEventListener('show.bs.modal', getWeatherForecast);
-  }
+} 
 
   //Pause Animation
   window.onload = function() {
