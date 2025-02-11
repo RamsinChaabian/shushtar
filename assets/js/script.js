@@ -36,7 +36,7 @@ function toggleArabicStylesheet(lang) {
   if (link) {
     head.removeChild(link); // Remove the old stylesheet link
   }
-  else if (lang === 'ar') {
+  else if (lang === 'ar' ||lang ==="fa") {
     const newLink = document.createElement('link');
     newLink.id = 'styles-link';
     newLink.rel = 'stylesheet';
@@ -166,11 +166,13 @@ async function getWeatherForecast() {
         date = new Date(year, month - 1, day, hour, minute, second);
         const dateTimeFormat = new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'short' });
         date = dateTimeFormat.format(date);
+        console.log(date);
         textStyle = "text-start";
       } else if (bodyDirection === "rtl") {
         date = new Date(year, month - 1, day, hour, minute, second);
         const dateTimeFormat = new Intl.DateTimeFormat('ar-SA', { dateStyle: 'full', timeStyle: 'short' });
         date = dateTimeFormat.format(date);
+        console.log(date);
         textStyle = "text-end";
       }
       const temperatureKelvin = forecast.main.temp;
@@ -232,7 +234,7 @@ async function fetchTehranTime() {
       if (bodyDirection === "ltr") {
         dateTimeFormat = new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'full' });
       } else if (bodyDirection === "rtl") {
-        dateTimeFormat = new Intl.DateTimeFormat('ar-SA', { dateStyle: 'full', timeStyle: 'full' });
+        dateTimeFormat = new Intl.DateTimeFormat('fa-IR', { dateStyle: 'full', timeStyle: 'full' });
       }
 
       setInterval(() => {

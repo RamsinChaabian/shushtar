@@ -16,7 +16,7 @@ var websiteJSON = {
     "url": "https://www.myshushtar.ir",
     "name": "Shushtar Tourist City",
     "description": "Official website for Shushtar, a tourist city offering rich cultural experiences.",
-    "inLanguage": ["en", "de", "ar", "fr", "es", "it","pt"]
+    "inLanguage": ["en", "de", "ar", "fr", "es", "it","pt","fa"]
 };
 
 //Font CSS
