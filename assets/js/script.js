@@ -234,7 +234,7 @@ async function fetchTehranTime() {
       if (bodyDirection === "ltr") {
         dateTimeFormat = new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'full' });
       } else if (bodyDirection === "rtl") {
-        dateTimeFormat = new Intl.DateTimeFormat('fa-IR', { dateStyle: 'full', timeStyle: 'full' });
+          dateTimeFormat = new Intl.DateTimeFormat(userPreferredLanguage === "fa" ? 'fa-IR' : 'ar-SA', { dateStyle: 'full', timeStyle: 'full' });
       }
 
       setInterval(() => {
